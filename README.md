@@ -1,5 +1,4 @@
-# EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-
-
+# EXPERIMENT-NO--02 - Interfacing Analog Input Sensor using Arduino (Pot)
 
 
 
@@ -67,22 +66,38 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+```
+int potPin= A5;
+int ledPin =2;
 
+void setup()
+{
+  pinMode(potPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+}
 
+void loop()
+{
+  int potMeasure = analogRead(A5);
+  Serial.print("Sensor Vlaue: ");
+  Serial.println(potMeasure);
+  if (potMeasure>=650)
+  {
+    digitalWrite(2, HIGH);
+  }
+  else
+  {  
+    digitalWrite(2, LOW);
+  }
+}
+```
+## OUTPUT 
+### BEFORE SIMULATION
+![Screenshot (208)](https://github.com/LATHIKESHWARAN/EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/119393556/34edacf3-bc0f-40cd-9f30-a818b2fef0cd)
+### AFTER SIMULATION
+![Screenshot (209)](https://github.com/LATHIKESHWARAN/EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/119393556/fd14fdc3-44b9-424b-afdf-1c181255b858)
 
-
-
-
-
-
-
-**
-**Simulation output:** 
-**
-
-
-[My image](username.github.com/repository/img/image.jpg)
 
 
 
