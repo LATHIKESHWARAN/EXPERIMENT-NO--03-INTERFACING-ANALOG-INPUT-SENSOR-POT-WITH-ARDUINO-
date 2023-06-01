@@ -65,7 +65,7 @@ FIGURE -01
 
 
 
-**PROGRAM** 
+## PROGRAM
 ```
 int potPin= A5;
 int ledPin =2;
